@@ -37,7 +37,7 @@ function getNextKeyIndex() {
 app.post('/api/chat', async (req, res) => {
     const userMessage = req.body.message || '';
     const files = req.body.files || []; 
-    const model = req.body.model || 'gemini-3-7-flash';
+    const model = req.body.model || 'gemini-1.5-flash';
     const customKey = req.query.keyapi;
 
     if (!userMessage && files.length === 0) {
