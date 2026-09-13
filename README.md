@@ -17,15 +17,13 @@ How to launch it:
 - In this step, please enter the following commands:
   npm init -y
 - Then add the following: cd C:/"The path to your server.js file"
-- Then continue by entering the following command:
-  npm install express cors
-  npm install axios express
-- After entering both commands and receiving a success message, to launch the program, enter the following command:
-  node server.js
+- Then continue by entering the following command: npm install express cors, npm install axios express
+- After entering both commands and receiving a success message, to launch the program, enter the following command: node server.js
 - When it shows "Gemini Proxy Server currently operating at the port", the server has successfully started!
 
 Additionally, if you want to open ports to allow the server to access the external network instead of the internal network, open CMD as an administrator and then enter this command:
   netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+  
 After the process is complete and it reports success, you can try running this command to test it: netstat -ano | findstr :80
 
 Upon successful completion, it will return an API link in this format: http://IP_SERVER/api/chat
